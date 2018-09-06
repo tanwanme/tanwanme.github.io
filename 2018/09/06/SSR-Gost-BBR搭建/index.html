@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>SSR+Gost+BBR搭建 | 皓月当空云归隐 | 爱学习的小白</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="魔改版BBR加速仅支持Centos7.x 12wget -N --no-check-certificate &amp;quot;https://raw.githubusercontent.com">
+<meta name="keywords" content="博客,贪玩,妖火网,Tanwan,Tanw,VPS,onedrive,hexo,indigo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSR+Gost+BBR搭建">
+<meta property="og:url" content="http://blog.tanw.top/2018/09/06/SSR-Gost-BBR搭建/index.html">
+<meta property="og:site_name" content="皓月当空云归隐">
+<meta property="og:description" content="魔改版BBR加速仅支持Centos7.x 12wget -N --no-check-certificate &amp;quot;https://raw.githubusercontent.com">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-6/78346869.jpg">
+<meta property="og:updated_time" content="2018-09-06T12:17:29.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSR+Gost+BBR搭建">
+<meta name="twitter:description" content="魔改版BBR加速仅支持Centos7.x 12wget -N --no-check-certificate &amp;quot;https://raw.githubusercontent.com">
+<meta name="twitter:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-6/78346869.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="皓月当空云归隐" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Tanwan</h5>
+          <a href="mailto:626591148@qq.com" title="626591148@qq.com" class="mail">626591148@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/tanwanme" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">SSR+Gost+BBR搭建</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">SSR+Gost+BBR搭建</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-06T12:17:24.000Z" itemprop="datePublished" class="page-time">
+  2018-09-06
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#魔改版BBR加速"><span class="post-toc-number">1.</span> <span class="post-toc-text">魔改版BBR加速</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Gost-udp转tcp"><span class="post-toc-number">2.</span> <span class="post-toc-text">Gost-udp转tcp</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#单用户SSR"><span class="post-toc-number">3.</span> <span class="post-toc-text">单用户SSR</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-SSR-Gost-BBR搭建"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">SSR+Gost+BBR搭建</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-06 20:17:24" datetime="2018-09-06T12:17:24.000Z"  itemprop="datePublished">2018-09-06</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-6/78346869.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="魔改版BBR加速"><a href="#魔改版BBR加速" class="headerlink" title="魔改版BBR加速"></a>魔改版BBR加速</h2><p>仅支持Centos7.x</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot;</span><br><span class="line">chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure>
+<h2 id="Gost-udp转tcp"><a href="#Gost-udp转tcp" class="headerlink" title="Gost-udp转tcp"></a>Gost-udp转tcp</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://code.aliyun.com/supppig/gost/raw/master/gost.sh &amp;&amp; bash gost.sh</span><br></pre></td></tr></table></figure>
+<h2 id="单用户SSR"><a href="#单用户SSR" class="headerlink" title="单用户SSR"></a>单用户SSR</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh &amp;&amp; chmod +x shadowsocks-all.sh &amp;&amp; ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-06T12:17:29.024Z" itemprop="dateUpdated">2018-09-06 20:17:29</time>
+</span><br>
+
+
+        
+        我愿意像手表上的针，陪你走完每分每秒
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.tanw.top">
+            <img src="/img/avatar.jpg" alt="Tanwan">
+            Tanwan
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/09/06/Cosplay：2B小姐姐/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Cosplay：2B小姐姐</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Tanwan &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '我躲好了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!被找到了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
