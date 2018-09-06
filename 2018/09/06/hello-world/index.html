@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>本地搭建Hexo并部署到Github | 皓月当空云归隐 | 爱学习的小白</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：  Node.js Git  如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 n">
+<meta name="keywords" content="博客,贪玩,妖火网,Tanwan,Tanw,VPS,onedrive,hexo,indigo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本地搭建Hexo并部署到Github">
+<meta property="og:url" content="http://blog.tanw.top/2018/09/06/hello-world/index.html">
+<meta property="og:site_name" content="皓月当空云归隐">
+<meta property="og:description" content="安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：  Node.js Git  如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 n">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-6/64994459.jpg">
+<meta property="og:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-6/92565187.jpg">
+<meta property="og:updated_time" content="2018-09-06T10:36:51.595Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="本地搭建Hexo并部署到Github">
+<meta name="twitter:description" content="安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：  Node.js Git  如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 n">
+<meta name="twitter:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-6/64994459.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="皓月当空云归隐" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Tanwan</h5>
+          <a href="mailto:626591148@qq.com" title="626591148@qq.com" class="mail">626591148@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">本地搭建Hexo并部署到Github</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">本地搭建Hexo并部署到Github</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-06T10:33:52.000Z" itemprop="datePublished" class="page-time">
+  2018-09-06
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装前提"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装前提</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装开始"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装开始</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#后续步骤（主题依赖和提交程序）"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">后续步骤（主题依赖和提交程序）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装结束"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装结束</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#测试："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">测试：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hexo常用指令"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">hexo常用指令</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主题安装"><span class="post-toc-number">4.</span> <span class="post-toc-text">主题安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Indigo"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Indigo</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#修改-Hexo-配置文件"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">修改 Hexo 配置文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主题更新"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">主题更新</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#部署Github"><span class="post-toc-number">5.</span> <span class="post-toc-text">部署Github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#建立Repository"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">建立Repository</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#建立关联"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">建立关联</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置SSh-key"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">配置SSh key</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#现在本地写好就能提交到github了"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">现在本地写好就能提交到github了</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Markdown文本编辑器"><span class="post-toc-number">6.</span> <span class="post-toc-text">Markdown文本编辑器</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-hello-world"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">本地搭建Hexo并部署到Github</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-06 18:33:52" datetime="2018-09-06T10:33:52.000Z"  itemprop="datePublished">2018-09-06</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-6/64994459.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<p><code>$ npm install -g hexo-cli</code></p>
+<h3 id="安装开始"><a href="#安装开始" class="headerlink" title="安装开始"></a>安装开始</h3><p>这里是示范安装到本地D盘的Hexo目录下 “将/d/Hexo换成你的目录”</p>
+<p><code>cd /d/Hexo</code>        -前往本地文件夹位置</p>
+<p><code>npm install -g hexo-cli</code>        -获取hexo博客主程序</p>
+<p><code>hexo init</code>        -本地安装hexo程序</p>
+<p><code>npm install</code>        -安装npm依赖</p>
+<h4 id="后续步骤（主题依赖和提交程序）"><a href="#后续步骤（主题依赖和提交程序）" class="headerlink" title="后续步骤（主题依赖和提交程序）"></a>后续步骤（主题依赖和提交程序）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-json-content --save</span><br><span class="line">npm install hexo-helper-qrcode --save</span><br><span class="line">npm install hexo-renderer-less --save</span><br></pre></td></tr></table></figure>
+<h3 id="安装结束"><a href="#安装结束" class="headerlink" title="安装结束"></a>安装结束</h3><h4 id="测试："><a href="#测试：" class="headerlink" title="测试："></a>测试：</h4><p><code>hexo g -s</code></p>
+<p>打开浏览器输入</p>
+<p><code>localhost:4000</code></p>
+<p>看到页面即完成</p>
+<h4 id="hexo常用指令"><a href="#hexo常用指令" class="headerlink" title="hexo常用指令"></a>hexo常用指令</h4><p><code>hexo new title</code>     -创建一个新文章</p>
+<p><code>hexo g</code>                -部署网站</p>
+<p><code>hexo s</code>                -启动本地服务器</p>
+<p><code>hexo clean</code>            -清除缓存文件</p>
+<p><code>hexo d</code>                -提交到服务器</p>
+<h3 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h3><h4 id="Indigo"><a href="#Indigo" class="headerlink" title="Indigo"></a>Indigo</h4><p><code>git clone git@github.com:yscoder/hexo-theme-indigo.git themes/indigo</code></p>
+<h4 id="修改-Hexo-配置文件"><a href="#修改-Hexo-配置文件" class="headerlink" title="修改 Hexo 配置文件"></a>修改 Hexo 配置文件</h4><p>此时应该在 Hexo 的根目录. 编辑 <code>_config.yml</code> 这个文档. 此文档包含网站诸如 站名, 站长名, 邮箱, 简介等等各种配置.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">title: 皓月当空云归隐</span><br><span class="line">subtitle: 爱学习的小白!</span><br><span class="line">description: 分享我觉得好玩的、有趣的的东西的一个小博客.</span><br><span class="line">keywords: 博客,贪玩,妖火网,Tanwan,Tanw,VPS,onedrive,hexo,indigo</span><br><span class="line">author: Tanwan</span><br><span class="line">language: zh_CN</span><br><span class="line">timezone: Asia/Shanghai</span><br><span class="line"></span><br><span class="line">url: http://blog.tanw.top</span><br><span class="line"></span><br><span class="line">theme: indigo</span><br><span class="line"></span><br><span class="line">jsonContent:</span><br><span class="line">    meta: false</span><br><span class="line">    pages: false</span><br><span class="line">    posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br><span class="line"></span><br><span class="line">feed:</span><br><span class="line">    type: atom</span><br><span class="line">    path: atom.xml</span><br><span class="line">    limit: 0</span><br></pre></td></tr></table></figure>
+<h4 id="主题更新"><a href="#主题更新" class="headerlink" title="主题更新"></a>主题更新</h4><p><code>hexo clean</code></p>
+<p><code>hexo g -s</code></p>
+<p>打开浏览器查看是否更新成功。</p>
+<h3 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h3><h4 id="建立Repository"><a href="#建立Repository" class="headerlink" title="建立Repository"></a>建立Repository</h4><p>建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。</p>
+<h4 id="建立关联"><a href="#建立关联" class="headerlink" title="建立关联"></a>建立关联</h4><p>修改—config.yml下的（tanwanme换成你的github名字）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: git@github.com:tanwanme/tanwanme.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<h4 id="配置SSh-key"><a href="#配置SSh-key" class="headerlink" title="配置SSh key"></a>配置SSh key</h4><p>输入以下命令,这个邮箱是你当时注册github时所用的邮箱。</p>
+<p><code>ssh-keygen -t rsa -C &quot;626591148@qq.com&quot;</code></p>
+<p>然后会要求你填写passphrase，一路回车即可。<br>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa)（回车就好），<br>Enter passphrase (empty for no passphrase):（回车，不需要输入密码）<br>Enter same passphrase again:（回车不需要输入密码）<br>注意： 因为Hexo的自动部署如果有密码的话会部署失败</p>
+<p>输入：<code>ssh-agent -s</code></p>
+<p>继续输入：<code>ssh-add ~/.ssh/id_rsa</code></p>
+<p>输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval `ssh-agent -s`</span><br></pre></td></tr></table></figure>
+<p>最后输入：<code>ssh-add</code></p>
+<p>到了这一步，就可以添加SSH key到你的Github账户了。键入以下指令，拷贝Key（先拷贝了，等一下可以直接粘贴）：</p>
+<p><code>clip &lt; ~/.ssh/id_rsa.pub</code></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-6/92565187.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>添加好ssh后，回到Git继续输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;tanwanme&quot;</span><br><span class="line">git config --global user.email &quot;626591148@qq.com&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="现在本地写好就能提交到github了"><a href="#现在本地写好就能提交到github了" class="headerlink" title="现在本地写好就能提交到github了"></a>现在本地写好就能提交到github了</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="Markdown文本编辑器"><a href="#Markdown文本编辑器" class="headerlink" title="Markdown文本编辑器"></a>Markdown文本编辑器</h3><p>推荐一个小清新编辑器<br><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>.</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-06T10:36:51.595Z" itemprop="dateUpdated">2018-09-06 18:36:51</time>
+</span><br>
+
+
+        
+        我愿意像手表上的针，陪你走完每分每秒
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.tanw.top">
+            <img src="/img/avatar.jpg" alt="Tanwan">
+            Tanwan
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+
+
+        </div>
+    </div>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Tanwan &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '我躲好了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!被找到了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
