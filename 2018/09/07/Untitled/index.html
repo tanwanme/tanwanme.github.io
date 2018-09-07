@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Aria2+Rclone+DirectoryLister+AriaNg | 皓月当空云归隐 | 爱学习的小白</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="前提  两个域名，一个作为DirectoryLister的域名，另外一个作为AriaNg的域名。 Debian* 8系统，本脚本只支持Debian 8 64位系统。   脚本wget -">
+<meta name="keywords" content="博客,贪玩,妖火网,Tanwan,Tanw,VPS,onedrive,hexo,indigo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aria2+Rclone+DirectoryLister+AriaNg">
+<meta property="og:url" content="http://blog.tanw.top/2018/09/07/Untitled/index.html">
+<meta property="og:site_name" content="皓月当空云归隐">
+<meta property="og:description" content="前提  两个域名，一个作为DirectoryLister的域名，另外一个作为AriaNg的域名。 Debian* 8系统，本脚本只支持Debian 8 64位系统。   脚本wget -">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-6/81337133.jpg">
+<meta property="og:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-7/14122037.jpg">
+<meta property="og:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-7/28844560.jpg">
+<meta property="og:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-7/25476113.jpg">
+<meta property="og:updated_time" content="2018-09-07T03:23:04.009Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aria2+Rclone+DirectoryLister+AriaNg">
+<meta name="twitter:description" content="前提  两个域名，一个作为DirectoryLister的域名，另外一个作为AriaNg的域名。 Debian* 8系统，本脚本只支持Debian 8 64位系统。   脚本wget -">
+<meta name="twitter:image" content="http://opoi5lllm.bkt.clouddn.com/18-9-6/81337133.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="皓月当空云归隐" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Tanwan</h5>
+          <a href="mailto:626591148@qq.com" title="626591148@qq.com" class="mail">626591148@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/tanwanme" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Aria2+Rclone+DirectoryLister+AriaNg</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Aria2+Rclone+DirectoryLister+AriaNg</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-07T03:01:11.000Z" itemprop="datePublished" class="page-time">
+  2018-09-07
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前提"><span class="post-toc-number">1.</span> <span class="post-toc-text">前提</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#脚本"><span class="post-toc-number">2.</span> <span class="post-toc-text">脚本</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#交互"><span class="post-toc-number">3.</span> <span class="post-toc-text">交互</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#后续"><span class="post-toc-number">4.</span> <span class="post-toc-text">后续</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#AriaNg成果"><span class="post-toc-number">5.</span> <span class="post-toc-text">AriaNg成果</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Directory成果"><span class="post-toc-number">6.</span> <span class="post-toc-text">Directory成果</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Untitled"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Aria2+Rclone+DirectoryLister+AriaNg</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-07 11:01:11" datetime="2018-09-07T03:01:11.000Z"  itemprop="datePublished">2018-09-07</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-6/81337133.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><blockquote>
+<ol>
+<li>两个域名，一个作为<code>DirectoryLister</code>的域名，另外一个作为<code>AriaNg</code>的域名。</li>
+<li>Debian* <strong>8</strong>系统，本脚本只支持Debian 8 64位系统。</li>
+</ol>
+</blockquote>
+<h4 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h4><p><code>wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Aria2-Rclone-DirectoryLister-Aria2Ng/chiakge-patch-1/Aria2.sh&quot; &amp;&amp; chmod +x Aria2.sh &amp;&amp; ./Aria2.sh</code></p>
+<h4 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#输入网盘域名及Aria2NG面板域名</span><br><span class="line">请输入你的DirectoryLister域名信息(eg:pan.94ish.me):</span><br><span class="line">请输入你的Aria2NG域名信息(eg:dl.94ish.me):</span><br><span class="line"></span><br><span class="line">#设置Aria2密钥</span><br><span class="line">请输入你的Aria2密钥:</span><br><span class="line"></span><br><span class="line">#配置Rclone，大致如下</span><br><span class="line">n) New remote</span><br><span class="line">s) Set configuration password</span><br><span class="line">q) Quit config</span><br><span class="line">n/s/q&gt; n</span><br><span class="line">name&gt; aria2down  #随便填，后面要用到</span><br><span class="line">Storage&gt; 11 #选择11</span><br><span class="line">client_id&gt; #留空</span><br><span class="line">client_secret&gt; #留空</span><br><span class="line">scope&gt; 1 #选择1</span><br><span class="line">root_folder_id&gt; #留空</span><br><span class="line">service_account_file&gt; #留空</span><br><span class="line">advan config？ n #选n</span><br><span class="line">Use auto config?</span><br><span class="line"> * Say Y if not sure</span><br><span class="line"> * Say N if you are working on a remote or headless machine or Y didn&apos;t work</span><br><span class="line">y) Yes</span><br><span class="line">n) No</span><br><span class="line">y/n&gt; n  #选择n</span><br><span class="line">If your browser doesn&apos;t open automatically go to the following link: https://accounts.google.com/o/oauth2/auth....  #复制到浏览器打开，获取验证码</span><br><span class="line">Log in and authorize rclone for access</span><br><span class="line">Enter verification code&gt;  #填入上面获取到的验证码</span><br><span class="line">Configure this as a team drive?</span><br><span class="line">y) Yes</span><br><span class="line">n) No</span><br><span class="line">y/n&gt; y  #选择y</span><br><span class="line">--------------------</span><br><span class="line">y) Yes this is OK</span><br><span class="line">e) Edit this remote</span><br><span class="line">d) Delete this remote</span><br><span class="line">y/e/d&gt; y  #选择y</span><br><span class="line"></span><br><span class="line">e) Edit existing remote</span><br><span class="line">n) New remote</span><br><span class="line">d) Delete remote</span><br><span class="line">r) Rename remote</span><br><span class="line">c) Copy remote</span><br><span class="line">s) Set configuration password</span><br><span class="line">q) Quit config</span><br><span class="line">e/n/d/r/c/s/q&gt; q  #选择q退出</span><br><span class="line"></span><br><span class="line">#最后输入Name</span><br><span class="line">请输入你刚刚输入的Name:</span><br><span class="line">请输入你云盘中需要挂载的文件夹:</span><br></pre></td></tr></table></figure>
+<h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><p><code>打开ariang 配置前端</code></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-7/14122037.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="AriaNg成果"><a href="#AriaNg成果" class="headerlink" title="AriaNg成果"></a>AriaNg成果</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-7/28844560.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="Directory成果"><a href="#Directory成果" class="headerlink" title="Directory成果"></a>Directory成果</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-7/25476113.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-07T03:23:04.009Z" itemprop="dateUpdated">2018-09-07 11:23:04</time>
+</span><br>
+
+
+        
+        我愿意像手表上的针，陪你走完每分每秒
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.tanw.top">
+            <img src="/img/avatar.jpg" alt="Tanwan">
+            Tanwan
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/09/06/SSR-Gost-BBR搭建/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">SSR+Gost+BBR搭建</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Tanwan &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '我躲好了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!被找到了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
