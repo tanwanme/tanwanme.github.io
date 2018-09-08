@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.tanw.top/"/>
-  <updated>2018-09-08T03:46:18.634Z</updated>
+  <updated>2018-09-08T06:55:50.329Z</updated>
   <id>http://blog.tanw.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Aria2+Aria2Ng+OneIndex+OneDrive</title>
+    <link href="http://blog.tanw.top/2018/09/08/Aria2-Aria2Ng-OneIndex-OneDrive/"/>
+    <id>http://blog.tanw.top/2018/09/08/Aria2-Aria2Ng-OneIndex-OneDrive/</id>
+    <published>2018-09-08T06:55:26.000Z</published>
+    <updated>2018-09-08T06:55:50.329Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-8/61875825.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><h5 id="系统要求：脚本只适用于Debian-8、9，且无网站环境，会自动签发Let-39-s-Encrypt-SSL证书，请提前将域名解析至VPS服务器。"><a href="#系统要求：脚本只适用于Debian-8、9，且无网站环境，会自动签发Let-39-s-Encrypt-SSL证书，请提前将域名解析至VPS服务器。" class="headerlink" title="系统要求：脚本只适用于Debian 8、9，且无网站环境，会自动签发Let&#39;s Encrypt SSL证书，请提前将域名解析至VPS服务器。"></a><strong>系统要求：</strong>脚本只适用于<code>Debian 8</code>、<code>9</code>，且无网站环境，会自动签发<code>Let&#39;s Encrypt SSL</code>证书，请提前将域名解析至<code>VPS</code>服务器。</h5><p><code>wget https://www.moerats.com/usr/shell/Aria2_OneIndex.sh &amp;&amp; bash Aria2_OneIndex.sh</code></p><h4 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入你的OneIndex域名信息(如:pan.tanw.top):</span><br><span class="line">请输入你的Aria2密钥:</span><br><span class="line">请输入你OneIndex/OneDrive中的一个文件夹（格式:vps）:</span><br></pre></td></tr></table></figure><p>输入好了后直到安装完成</p><p><code>Aria2Ng</code>访问地址：<code>http://IP:8080</code></p><p><code>OneIndex</code>访问地址：<code>https://pan.tanw.top/?/admin</code></p><p><code>OneIndex</code>后台地址：<code>https://pan.tanw.top/?/admin</code>，默认密码：<code>oneindex</code></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="http://opoi5lllm.bkt.clouddn.com/18-9-8/90359319.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Aria2+Rclone+DirectoryLister+AriaNg</title>
