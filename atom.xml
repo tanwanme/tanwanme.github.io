@@ -6,7 +6,7 @@
   <link href="https://kzdd.us.kg/atom.xml" rel="self"/>
   
   <link href="https://kzdd.us.kg/"/>
-  <updated>2024-09-23T14:04:29.325Z</updated>
+  <updated>2024-09-23T14:13:44.673Z</updated>
   <id>https://kzdd.us.kg/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo部署到github page</title>
+    <link href="https://kzdd.us.kg/2018/09/02/hello-world/"/>
+    <id>https://kzdd.us.kg/2018/09/02/hello-world/</id>
+    <published>2018-09-02T09:39:00.000Z</published>
+    <updated>2024-09-23T14:13:44.673Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h3><h4 id="建立Repository"><a href="#建立Repository" class="headerlink" title="建立Repository"></a>建立Repository</h4><p>建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。</p><p>（tanwanme换成你的github用户名）</p><h4 id="建立关联"><a href="#建立关联" class="headerlink" title="建立关联"></a>建立关联</h4><p>修改d/Hexo/_config.yml</p><pre><code class="lang-json">deploy:    type: git    repository: git@github.com:tanwanme/tanwanme.github.io.git    branch: master</code></pre><h4 id="配置SSh-key"><a href="#配置SSh-key" class="headerlink" title="配置SSh key"></a>配置SSh key</h4><p>输入以下命令,这个邮箱是你当时注册github时所用的邮箱。</p><pre><code class="lang-shell">ssh-keygen -t rsa -C &quot;6265911@qq.com&quot;</code></pre><p>然后会要求你填写passphrase，一路回车即可。<br>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa)（回车就好），<br>Enter passphrase (empty for no passphrase):（回车，不需要输入密码）<br>Enter same passphrase again:（回车不需要输入密码）<br>注意： 因为Hexo的自动部署如果设置了密码的话会部署失败</p><p>继续执行一下命令</p><pre><code class="lang-shell">ssh-agent -sssh-add ~/.ssh/id_rsaclip &lt; ~/.ssh/id_rsa.pub</code></pre><p>键入以上最后一条指令，拷贝Key（先拷贝了，等一下可以直接粘贴）</p><p>到了这一步，就可以添加SSH key到你的Github账户了。</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://g.gtimg.cn/music/photo_new/T053XD010038DeIF2pverB.png" alt="github-sshkey" title="">                </div>                <div class="image-caption">github-sshkey</div>            </figure><p>github-sshkey</p><p>添加好ssh后，回到Git继续输入</p><pre><code class="lang-shell">git config --global user.name &quot;tanwanme&quot;git config --global user.email &quot;10086@qq.com&quot;</code></pre><h4 id="现在本地写好就能提交到github了"><a href="#现在本地写好就能提交到github了" class="headerlink" title="现在本地写好就能提交到github了"></a>现在本地写好就能提交到github了</h4><pre><code class="lang-shell">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><h3 id="Markdown文本编辑器"><a href="#Markdown文本编辑器" class="headerlink" title="Markdown文本编辑器"></a>Markdown文本编辑器</h3><p>推荐一个小清新编辑器<br><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;部署Github&quot;&gt;&lt;a href=&quot;#部署Github&quot; class=&quot;headerlink&quot; title=&quot;部署Github&quot;&gt;&lt;/a&gt;部署Github&lt;/h3&gt;&lt;h4 id=&quot;建立Repository&quot;&gt;&lt;a href=&quot;#建立Repository&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hexo windows安装部署</title>
-    <link href="https://kzdd.us.kg/2024/09/23/Hexo-windows%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/"/>
-    <id>https://kzdd.us.kg/2024/09/23/Hexo-windows%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/</id>
-    <published>2024-09-23T13:58:07.000Z</published>
-    <updated>2024-09-23T14:04:29.325Z</updated>
+    <link href="https://kzdd.us.kg/2018/09/01/Hexo-windows%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/"/>
+    <id>https://kzdd.us.kg/2018/09/01/Hexo-windows%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/</id>
+    <published>2018-09-01T12:58:00.000Z</published>
+    <updated>2024-09-23T14:13:58.198Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p><ul><li><a href="https://nodejs.org/dist/v10.24.1/node-v10.24.1-x64.msi" target="_blank" rel="noopener">Node.js</a></li><li><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a></li></ul><p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p><h3 id="主程序安装"><a href="#主程序安装" class="headerlink" title="主程序安装"></a>主程序安装</h3><pre><code class="lang-shell">cd D:/Hexo</code></pre><p>cd到你需要安装hexo的目录下，这里是示范安装到本地D盘的Hexo目录下</p><pre><code class="lang-shell">npm install -g hexo-clihexo initnpm i hexo@4.2.1npm installnpm uninstall hexo-renderer-marked --savenpm install hexo-renderer-kramed --savenpm install hexo-deployer-git --savenpm install hexo-generator-feed --savenpm install hexo-generator-json-content --savenpm install hexo-renderer-less --savenpm install hexo-admin --save</code></pre><h4 id="测试："><a href="#测试：" class="headerlink" title="测试："></a>测试：</h4><pre><code class="lang-shell">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></pre><p>浏览器打开<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a> 页面出现内容Hello world即完成安装。</p><h4 id="hexo常用指令"><a href="#hexo常用指令" class="headerlink" title="hexo常用指令"></a>hexo常用指令</h4><p><code>hexo new title</code> -创建一个新文章</p><p><code>hexo g</code> -部署网站</p><p><code>hexo s</code> -启动本地服务器</p><p><code>hexo clean</code> -清除缓存文件</p><p><code>hexo d</code> -提交到服务器（需要后续绑定）</p><h3 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h3><h4 id="hexo-theme-Indigo"><a href="#hexo-theme-Indigo" class="headerlink" title="hexo-theme-Indigo"></a>hexo-theme-Indigo</h4><p>本项目参照</p><p><a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">yscoder/hexo-theme-indigo: 一个Material Design风格的Hexo主题 (github.com)</a></p><p><a href="https://github.com/abelsu7/hexo-theme-indigo-plus" target="_blank" rel="noopener">abelsu7/hexo-theme-indigo-plus: 💾hexo-theme-indigo 主题优化版 (github.com)</a></p><pre><code class="lang-shell">git clone https://github.com/tanwanme/indigo.git themes/indigo</code></pre><h4 id="修改-Hexo-配置文件"><a href="#修改-Hexo-配置文件" class="headerlink" title="修改 Hexo 配置文件"></a>修改 Hexo 配置文件</h4><p>此时应该在 Hexo 的根目录(d/Hexo/). 编辑 <code>_config.yml</code> 这个文档. 此文档包含网站诸如 站名, 站长名, 邮箱, 简介等等各种配置.</p><pre><code class="lang-json">title: 皓月当空云归隐subtitle: 爱学习的小白!description: &#39;分享我觉得好玩的、有趣的的东西的一个小博客.&#39;keywords: hexo,indigoauthor: Tanwanlanguage: zh_CNtimezone: &#39;Asia/Shanghai&#39;url: https://kzdd.us.kgtheme: indigojsonContent:    meta: false    pages: falseposts:    title: true    date: true    path: true    text: true    raw: false    content: false    slug: false    updated: false    comments: false    link: false    permalink: false    excerpt: false    categories: false    tags: truefeed:    type: atom    path: atom.xml    limit: 0</code></pre><h4 id="构建新网站内容"><a href="#构建新网站内容" class="headerlink" title="构建新网站内容"></a>构建新网站内容</h4><pre><code class="lang-shell">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></pre><p>浏览器打开<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a>查看是否更新成功。</p><h3 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h3><h4 id="建立Repository"><a href="#建立Repository" class="headerlink" title="建立Repository"></a>建立Repository</h4><p>建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。</p><p>（tanwanme换成你的github用户名）</p><h4 id="建立关联"><a href="#建立关联" class="headerlink" title="建立关联"></a>建立关联</h4><p>修改d/Hexo/_config.yml</p><pre><code class="lang-json">deploy:    type: git    repository: git@github.com:tanwanme/tanwanme.github.io.git    branch: master</code></pre><h4 id="配置SSh-key"><a href="#配置SSh-key" class="headerlink" title="配置SSh key"></a>配置SSh key</h4><p>输入以下命令,这个邮箱是你当时注册github时所用的邮箱。</p><pre><code class="lang-shell">ssh-keygen -t rsa -C &quot;10086@qq.com&quot;</code></pre><p>然后会要求你填写passphrase，一路回车即可。<br>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa)（回车就好），<br>Enter passphrase (empty for no passphrase):（回车，不需要输入密码）<br>Enter same passphrase again:（回车不需要输入密码）<br>注意： 因为Hexo的自动部署如果设置了密码的话会部署失败</p><p>继续执行一下命令</p><pre><code class="lang-shell">ssh-agent -sssh-add ~/.ssh/id_rsaclip &lt; ~/.ssh/id_rsa.pub</code></pre><p>键入以上最后一条指令，拷贝Key（先拷贝了，等一下可以直接粘贴）</p><p>到了这一步，就可以添加SSH key到你的Github账户了。</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://g.gtimg.cn/music/photo_new/T053XD010038DeIF2pverB.png" alt="github-sshkey" title="">                </div>                <div class="image-caption">github-sshkey</div>            </figure><p>github-sshkey</p><p>添加好ssh后，回到Git继续输入</p><pre><code class="lang-shell">git config --global user.name &quot;tanwanme&quot;git config --global user.email &quot;10086@qq.com&quot;</code></pre><h4 id="现在本地写好就能提交到github了"><a href="#现在本地写好就能提交到github了" class="headerlink" title="现在本地写好就能提交到github了"></a>现在本地写好就能提交到github了</h4><pre><code class="lang-shell">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><h3 id="Markdown文本编辑器"><a href="#Markdown文本编辑器" class="headerlink" title="Markdown文本编辑器"></a>Markdown文本编辑器</h3><p>推荐一个小清新编辑器<br><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>.</p>]]></content>
     
@@ -31,26 +51,6 @@
     <summary type="html">&lt;h3 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h3&gt;&lt;p&gt;安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:/</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://kzdd.us.kg/2024/09/23/hello-world/"/>
-    <id>https://kzdd.us.kg/2024/09/23/hello-world/</id>
-    <published>2024-09-23T13:39:16.929Z</published>
-    <updated>2024-09-23T13:39:16.929Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="lang-bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="lang-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="lang-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="lang-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.</summary>
       
     
     
