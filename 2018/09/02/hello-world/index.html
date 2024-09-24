@@ -21,16 +21,16 @@
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="部署Github建立Repository建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。 （tanwanme换成你的github用户名） 建立关联修改d&#x2F;Hexo&#x2F;_config.yml deploy:     type: git     repository: git@github.com:tanwanme&#x2F;tanwanme.github.io.git">
+    <meta name="description" content="部署Github 建立Repository建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。 （tanwanme换成你的github用户名） 建立关联修改d&#x2F;Hexo&#x2F;_config.yml deploy:     type: git     repository: git@github.com:tanwanme&#x2F;tanwanme.github.io.git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo部署到github page">
 <meta property="og:url" content="https://kzdd.us.kg/2018/09/02/hello-world/index.html">
 <meta property="og:site_name" content="皓月当空云归隐">
-<meta property="og:description" content="部署Github建立Repository建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。 （tanwanme换成你的github用户名） 建立关联修改d&#x2F;Hexo&#x2F;_config.yml deploy:     type: git     repository: git@github.com:tanwanme&#x2F;tanwanme.github.io.git">
+<meta property="og:description" content="部署Github 建立Repository建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。 （tanwanme换成你的github用户名） 建立关联修改d&#x2F;Hexo&#x2F;_config.yml deploy:     type: git     repository: git@github.com:tanwanme&#x2F;tanwanme.github.io.git">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://g.gtimg.cn/music/photo_new/T053XD010038DeIF2pverB.png">
 <meta property="article:published_time" content="2018-09-02T09:39:00.000Z">
-<meta property="article:modified_time" content="2024-09-23T14:13:44.673Z">
+<meta property="article:modified_time" content="2024-09-24T10:33:12.662Z">
 <meta property="article:author" content="Tanwan">
 <meta property="article:tag" content="indigo">
 <meta name="twitter:card" content="summary">
@@ -136,7 +136,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#部署Github"><span class="post-toc-number">1.</span> <span class="post-toc-text">部署Github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#建立Repository"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">建立Repository</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#建立关联"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">建立关联</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置SSh-key"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">配置SSh key</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#现在本地写好就能提交到github了"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">现在本地写好就能提交到github了</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Markdown文本编辑器"><span class="post-toc-number">2.</span> <span class="post-toc-text">Markdown文本编辑器</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#部署Github"><span class="post-toc-number">1.</span> <span class="post-toc-text">部署Github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#建立Repository"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">建立Repository</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#建立关联"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">建立关联</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置SSh-key"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">配置SSh key</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#提交到github"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">提交到github</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git：将本地项目上传到Github"><span class="post-toc-number">2.</span> <span class="post-toc-text">Git：将本地项目上传到Github</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Markdown文本编辑器"><span class="post-toc-number">3.</span> <span class="post-toc-text">Markdown文本编辑器</span></a></li></ol>
         </nav>
     </aside>
 
@@ -157,7 +157,8 @@
             
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h3><h4 id="建立Repository"><a href="#建立Repository" class="headerlink" title="建立Repository"></a>建立Repository</h4><p>建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。</p>
+            <h3 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h3><hr>
+<h4 id="建立Repository"><a href="#建立Repository" class="headerlink" title="建立Repository"></a>建立Repository</h4><p>建立与你用户名对应的仓库名必须为【tanwanme.github.io】，固定写法。</p>
 <p>（tanwanme换成你的github用户名）</p>
 <h4 id="建立关联"><a href="#建立关联" class="headerlink" title="建立关联"></a>建立关联</h4><p>修改d/Hexo/_config.yml</p>
 <pre><code class="lang-json">deploy:
@@ -188,8 +189,26 @@ clip &lt; ~/.ssh/id_rsa.pub
 <pre><code class="lang-shell">git config --global user.name &quot;tanwanme&quot;
 git config --global user.email &quot;10086@qq.com&quot;
 </code></pre>
-<h4 id="现在本地写好就能提交到github了"><a href="#现在本地写好就能提交到github了" class="headerlink" title="现在本地写好就能提交到github了"></a>现在本地写好就能提交到github了</h4><pre><code class="lang-shell">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+<h4 id="提交到github"><a href="#提交到github" class="headerlink" title="提交到github"></a>提交到github</h4><pre><code class="lang-shell">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
 </code></pre>
+<hr>
+<h3 id="Git：将本地项目上传到Github"><a href="#Git：将本地项目上传到Github" class="headerlink" title="Git：将本地项目上传到Github"></a>Git：将本地项目上传到Github</h3><p>例如tanwanme/indigo这个仓库，克隆到本地git-upload这个文件夹</p>
+<pre><code class="lang-shell">git clone https://github.com/tanwanme/indigo.git git-upload
+</code></pre>
+<p>进入这个git-upload indigo这个文件夹，修改里面你需要上传到github的内容（保留.github这个文件夹）</p>
+<pre><code class="lang-shell">cd git-upload/indigo
+</code></pre>
+<p>接下来依次输入以下代码即可完成其他剩余操作：</p>
+<pre><code class="lang-shell">git add .
+</code></pre>
+<p><code>（注：别忘了有个 .  此操作是把indigo文件夹下面的文件都添加进来）</code></p>
+<pre><code class="lang-shell">git commit  -m  &quot;myself&quot;
+</code></pre>
+<p><code>（注：“myself”里面换成你需要显示在github的提交描述,如“first commit”、&quot;第一次提交&quot;等）</code></p>
+<pre><code class="lang-shell">git push -u origin main
+</code></pre>
+<p><code>（注：此操作目的是把本地仓库push到github上面的main分支，此步骤需要你输入帐号和密码）</code></p>
+<hr>
 <h3 id="Markdown文本编辑器"><a href="#Markdown文本编辑器" class="headerlink" title="Markdown文本编辑器"></a>Markdown文本编辑器</h3><p>推荐一个小清新编辑器<br><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>.</p>
 
         </div>
@@ -199,7 +218,7 @@ git config --global user.email &quot;10086@qq.com&quot;
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2024-09-23T14:13:44.673Z" itemprop="dateUpdated">2024-09-23 22:13:44</time>
+    最后更新时间：<time datetime="2024-09-24T10:33:12.662Z" itemprop="dateUpdated">2024-09-24 18:33:12</time>
 </span><br>
 
 
@@ -217,10 +236,6 @@ git config --global user.email &quot;10086@qq.com&quot;
 </blockquote>
 
         
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
 
 
         <div class="post-footer">
@@ -233,7 +248,14 @@ git config --global user.email &quot;10086@qq.com&quot;
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/09/03/a/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Docker方式部署Hexo</h4>
+      </a>
+    </div>
   
 
   
@@ -271,32 +293,6 @@ git config --global user.email &quot;10086@qq.com&quot;
 
 
 </article>
-
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        感谢支持！
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-item switch">切换</span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
 
 
 
@@ -347,7 +343,7 @@ git config --global user.email &quot;10086@qq.com&quot;
 
     <script src="//cdn.jsdelivr.net/npm/node-waves@0.7.6/src/js/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
 
 
 </script>
